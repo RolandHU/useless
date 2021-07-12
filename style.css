@@ -1,0 +1,83 @@
+@font-face {
+    font-family: raleway-eb;
+    src: url("Raleway-ExtraBold.ttf");
+}
+
+@keyframes fel {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(calc(-100vh));}
+}
+
+@keyframes le {
+    0% {transform: translateY(calc(-100vh));}
+    100% {transform: translateY(0px);}
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(30, 30, 30);
+}
+
+.container {
+    width: 700px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("https://i.pinimg.com/originals/83/4b/dc/834bdc62616b124bf0d764b670763438.gif");
+    background-position: center;
+    animation: none;
+    animation-fill-mode: forwards;
+}
+
+.container button {
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    font-family: raleway-eb;
+    font-size: 18px;
+    color: rgb(30, 30, 30);
+    background: orange;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.5s;
+}
+
+.container button:active {
+    background: gray;
+}
+
+@media (hover: hover) {
+    .container button:hover {
+        background: gray;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        width: calc(100vw - 20px);
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container button {
+        width: calc(100vw - 40px);
+    }
+}
